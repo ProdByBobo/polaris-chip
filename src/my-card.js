@@ -35,6 +35,10 @@ export class MyCard extends LitElement {
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the image horizontally */
+        justify-content: center; /* Center the image vertically */
       }
       .card img {
         max-width: 100%;
@@ -84,6 +88,10 @@ h1,h2 {
 img {
   border: 5px solid #555;
   border-color: #f7c250;
+  width: 400px; 
+  height: 400px;
+  object-fit: cover;
+
 }
 p {
   color: black;
@@ -103,6 +111,8 @@ p {
     background-color: #000000;
     color: #f7c250;
   }
+  
+
 
 
 
