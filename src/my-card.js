@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { ref } from 'lit/directives/ref.js';
+import "@haxtheweb/meme-maker/meme-maker.js";
 
 /**
  * Now it's your turn. Here's what we need to try and do:
@@ -40,7 +41,7 @@ export class MyCard extends LitElement {
         align-items: center; /* Center the image horizontally */
         justify-content: center; /* Center the image vertically */
       }
-      .card img {
+      .card meme-maker {
         max-width: 100%;
         border-radius: 8px 8px 0 0;
       }
@@ -85,12 +86,12 @@ h1,h2 {
   font-family:verdana;
   
 }
-img {
+meme-maker {
   border: 5px solid #555;
   border-color: #f7c250;
-  width: 400px; 
+  width: 300px; 
   height: 400px;
-  object-fit: cover;
+  object-fit: cover; 
 
 }
 p {
@@ -140,7 +141,7 @@ p {
     <button @click="${this.toggleFancy}">Toggle Fancy</button>
       <div class="card">
         <h1 class="cardheader"><b>${this.title}</b></h1>
-          <img src=${this.image} alt=${this.title} />
+          <meme-maker top-text="Cat Nation" bottom-text="Catso" image-url=${this.image} alt=${this.title}></meme-maker>
           <details ?open="${this.fancy}" @toggle="${this.openChanged}">
             <summary>Description</summary>
             <div>
