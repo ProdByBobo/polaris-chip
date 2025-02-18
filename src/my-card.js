@@ -24,7 +24,7 @@ export class MyCard extends LitElement {
   static get styles() {
     return css`
       :host {
-        display: block;
+        display: inline-block;
       }
       a {
         text-decoration: none;
